@@ -16,6 +16,9 @@
 
 Visit our Hugging Face or ModelScope organization (click links above), search checkpoints with names starting with `Qwen3-Coder-`, and you will find all you need! Enjoy!
 
+# Latest News
+🔥🔥🔥 Qwen3-Coder-30B-A3B-Instruct has been released, for more information <a href="https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/tree/main">here</a>.  
+
 # Qwen3-Coder: Agentic Coding in the World.
 
 ## Introduction
@@ -48,6 +51,9 @@ Today, we're announcing Qwen3-Coder, our most agentic code model to date. **Qwen
 |-----------------------------|----------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Qwen3-Coder-480B-A35B-Instruct         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct  ) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct)                                       |
 | Qwen3-Coder-480B-A35B-Instruct-FP8         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8)                                       |
+| Qwen3-Coder-30B-A3B-Instruct         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-30B-A3B-Instruct)                                       |
+| Qwen3-Coder-30B-A3B-Instruct-FP8         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8)                                       |
+
 
 Detailed performance and introduction are shown in this <a href="https://qwenlm.github.io/blog/qwen3-coder"> 📑 blog</a>.
 
@@ -58,7 +64,7 @@ Detailed performance and introduction are shown in this <a href="https://qwenlm.
 >
 > This model supports only non-thinking mode and does not generate ``<think></think>`` blocks in its output. Meanwhile, specifying `enable_thinking=False` is no longer required.**
 >
-### 👉🏻 Chat with Qwen3-Coder-480B-A35B-Instruct
+### 👉🏻 Chat with Qwen3-Coder
 You can just write several lines of code with `transformers` to chat with Qwen3-Coder-480B-A35B-Instruct. Essentially, we build the tokenizer and the model with `from_pretrained` method, and we use generate method to perform chatting with the help of chat template provided by the tokenizer. Below is an example of how to chat with **Qwen3-Coder-480B-A35B-Instruct**:
 
 ```python
@@ -100,9 +106,13 @@ The `max_new_tokens` argument is used to set the maximum length of the response.
 You can use the other size of instruct model in the same way.
 
 
-#### Fill in the middle with Qwen3-Coder-480B-A35B-Instruct
+#### Fill in the middle with Qwen3-Coder
 
 The code insertion task, also referred to as the "fill-in-the-middle" challenge, requires the insertion of code segments in a manner that bridges the gaps within a given code context. For an approach aligned with best practices, we recommend adhering to the formatting guidelines outlined in the paper "Efficient Training of Language Models to Fill in the Middle"[[arxiv](https://arxiv.org/abs/2207.14255)]. 
+
+> [!Important]
+> It should be noted that FIM is supported in every version of Qwen3-Coder. Qwen3-Coder-480B-A35B-Instruct is shown here as an example.
+>
 
 The prompt should be structured as follows:
 ```python
@@ -329,8 +339,6 @@ Animations should be very smooth.
 
 ## Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=QwenLM/Qwen3-Coder&type=Date)](https://star-history.com/#QwenLM/Qwen3-Coder&Date)
-
-
 
 ## Citation
 If you find our work helpful, feel free to give us a cite.
